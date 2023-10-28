@@ -1,0 +1,229 @@
+body{
+    background-color: aliceblue;
+    margin: auto;
+    font-family: 'Tilt Neon', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/*Css para el header*/
+
+header{
+    background-color: #589d62;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 5px 25px black;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+}
+
+header div{
+    line-height: 50px;
+    text-align: center;
+}
+
+.logo{
+    width :  75%;
+    height : 75%;
+    text-align: center;
+    
+}
+
+.logo img{
+    object-fit: fill;
+    width: 50px;
+    height: 50px;
+    margin-top: 15px;
+}
+
+.otrapag{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.otrapag a:hover{
+    font-size: large;
+    color: black;
+}
+
+nav{
+    text-align: center;
+    margin-top: 2.5%; 
+}
+
+.fondo{
+    width: 100%;
+    height: 200pt;
+    object-fit: contain;
+}
+
+/*Transicion*/
+
+#trancuadro{
+    width: 100%;
+    overflow: hidden;
+}
+
+.transici{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    gap: 5px;
+    animation: cambio 17s infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+.transici img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+
+@keyframes cambio{
+    0%{transform: translateX(0);}
+    
+    20%{transform: translateX(0)}
+
+    25%{transform: translateX(-100%)}
+
+    40%{transform: translateX(-100%)}
+
+    50%{transform: translateX(-200%)}
+
+    60%{transform: translateX(-200%)}
+
+    75%{transform: translateX(-300%)}
+
+    100%{transform: translateX(-300%)}
+}
+
+/*Css para el main*/
+
+main{
+    text-align: center;
+    margin-top: 2.5%;
+    display: grid;
+    grid-template-areas: "arriba arriba arriba"
+                         "izquierda medio derecha"
+                         "mediz medmed medder"
+                         "abajo abajo abajo";
+    gap: 2.5%;
+}
+
+#titulo{
+    position: relative;
+    left: 12%;
+    width: 75%;
+    grid-area: arriba;
+}
+
+#resta{
+    grid-area: izquierda;
+}
+
+#protec{
+    grid-area: medio;
+}
+
+#educa{
+    overflow: auto;
+    grid-area: derecha;
+}
+
+#reciclaje{
+
+    grid-area: mediz;
+}
+
+#monitoreo{
+
+    grid-area: medmed;
+}
+
+#colaboracion{
+    overflow: auto;
+    grid-area: medder;
+}
+article{
+    width: 85%;
+    display: grid;
+    place-content: center;
+}
+
+section{
+    width: 85%;
+    display: grid;
+    place-content: center;
+}
+
+article:hover{
+    color: #1a512e;
+    font-weight: 1000;
+    transition: 1s;
+    text-shadow: 0px 1px 10px black;
+}
+
+section:hover{
+    color: #1a512e;
+    font-weight: 1000;
+    transition: 1s;
+    text-shadow: 0px 1px 10px black;
+}
+
+/*Css para aside - anuncio*/
+
+aside{
+    grid-area: abajo;
+    background-image: url(../Imagenes/anuncioMascotas.jpg);
+    width: 75%;
+    height: 100%;
+    box-shadow: 0px 0px 0.5px 0.5px black;
+    background-repeat: round;
+    font-size: x-large;
+    text-align: center;
+    display: grid;
+    place-content: center;
+    position: relative;
+    left: 12%;
+}
+
+.cerrarIcon{
+    z-index: -1;
+    width: 15%;
+    height: 10vh;
+    cursor: pointer;
+    background-color: #dddddd;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    position:sticky;
+    left: 100%;
+    bottom: 100%;
+}
+
+.cerrarIcon img{
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+}
+
+aside:hover{
+    z-index: 1;
+}
+
+footer{
+    width: 100%;
+}
+
+.google{
+    grid-area: right;
+    width: 50%;
+    height: 5vh;
+}
